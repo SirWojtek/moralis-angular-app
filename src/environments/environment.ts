@@ -4,8 +4,8 @@
 
 export const environment = {
   moralis: {
-    appId: undefined,
-    serverUrl: undefined,
+    appId: 'VElaWaZxBY1Ys1Qji6OzRGVXWoaLGQYe8Xzu3q45',
+    serverUrl: 'https://n3unuvp0fxbt.usemoralis.com:2053/server',
   },
   production: false,
 };
