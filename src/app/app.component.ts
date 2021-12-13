@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'moralis-angular-app';
+  public user = null;
+
+  public login(): void {}
+
+  public logout(): void {}
 }
