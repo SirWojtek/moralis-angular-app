@@ -16,7 +16,7 @@ export class AppComponent {
     this.userOb.subscribe(console.log);
   }
 
-  public login(provider: Moralis.Web3ProviderType = 'metamask'): void {
+  public login(provider: Moralis.Web3ProviderType): void {
     this.moralisService.login({ provider });
   }
 
