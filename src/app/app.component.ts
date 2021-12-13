@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import Moralis from 'moralis/types';
+import { MoralisService } from './moralis.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'moralis-angular-app';
-  public user = null;
+  public userOb = this.moralisService.observeUser();
 
-  public login(): void {}
+  constructor(private moralisService: MoralisService) {
+    this.moralisService.startMoralis().subscribe(() => console.log('Started Moralis'));
+    this.userOb.subscribe(console.log);
+  }
 
-  public logout(): void {}
+  public login(provider: Moralis.Web3ProviderType = 'metamask'): void {
+    this.moralisService.login({ provider });
+  }
+
+  public logout(): void {
+    this.moralisService.logout();
+  }
 }

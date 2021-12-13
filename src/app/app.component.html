@@ -2,12 +2,12 @@
   <h1>Welcome to {{ title }}!</h1>
 
   <div style="display: flex; justify-content: center;">
-    <ng-container *ngIf="user; else needLogin">
+    <ng-container *ngIf="userOb | async; else needLogin">
       <button (click)="logout()">Logout</button>
     </ng-container>
     <ng-template #needLogin>
-      <button (click)="login()">Login with Metamask</button>
-      <button (click)="login()">
+      <button (click)="login('metamask')">Login with Metamask</button>
+      <button (click)="login('walletconnect')">
         Login with WalletConnect
       </button>
     </ng-template>
