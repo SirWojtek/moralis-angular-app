@@ -12,6 +12,7 @@
     },
     "array-type": false,
     "arrow-return-shorthand": true,
+    "arrow-parens": [true, "ban-single-arg-parens"],
     "curly": true,
     "deprecation": {
       "severity": "warning"
@@ -30,7 +31,7 @@
     "max-classes-per-file": false,
     "max-line-length": [
       true,
-      140
+      120
     ],
     "member-ordering": [
       true,
